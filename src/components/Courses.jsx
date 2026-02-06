@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 
 const courses = [
-  { name: "10th", path: "/courses/10th" },
+  { name: "11th", path: "/courses/11th" },
   { name: "12th", path: "/courses/12th" },
   { name: "CA", path: "/courses/ca" },
   { name: "CS", path: "/courses/cs" },

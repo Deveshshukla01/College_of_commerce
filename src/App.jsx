@@ -58,7 +58,7 @@ export default function App() {
         <Route path="/apply" element={<Apply />} />
 
         {/* course routes */}
-        <Route path="/courses/10th" element={<Tenth />} />
+        <Route path="/courses/11th" element={<Tenth />} />
         <Route path="/courses/12th" element={<Twelfth />} />
         <Route path="/courses/ca" element={<CA />} />
         <Route path="/courses/cs" element={<CS />} />
