@@ -1,0 +1,332 @@
+import { useState, useEffect } from "react";
+import ApplyNavbar from "../components/ApplyNavbar";
+import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
+
+export default function CA() {
+  const [active, setActive] = useState("foundation");
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [active]);
+
+  return (
+    <div className="min-h-screen bg-white flex flex-col">
+      <ApplyNavbar />
+
+      {/* HERO */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <span className="inline-block mb-4 text-sm font-semibold text-red-600">
+            Chartered Accountancy Program
+          </span>
+
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <span className="text-red-600">CA</span> Course
+          </h1>
+
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
+            Structured and disciplined preparation for CA Foundation and
+            CA Inter with complete syllabus coverage and regular testing.
+          </p>
+
+          <Link to="/apply">
+            <button className="px-12 py-4 border-2 border-red-600 text-red-600 font-semibold hover:bg-red-600 hover:text-white transition">
+              Apply for Admission
+            </button>
+          </Link>
+        </div>
+      </section>
+
+      {/* STICKY OPTIONS */}
+      <section className="sticky top-16 z-20 bg-white py-6">
+        <div className="max-w-6xl mx-auto px-6 flex gap-4 justify-center flex-wrap">
+          {[
+            { id: "foundation", label: "CA Foundation" },
+            { id: "group1", label: "CA Inter – Group 1" },
+            { id: "group2", label: "CA Inter – Group 2" },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActive(tab.id)}
+              className={`px-6 py-3 border font-semibold transition ${
+                active === tab.id
+                  ? "bg-red-600 text-white border-red-600"
+                  : "border-red-600 text-red-600 hover:bg-red-600 hover:text-white"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* CONTENT SWITCH */}
+      {active === "foundation" && (
+        <CourseBlock
+          title="CA Foundation"
+          feeTitle="CA Foundation – Fee Structure"
+          duration="4 Months"
+          fee="₹38,000"
+          subjects={[
+            ["Business Laws & BCR", "9:15 AM – 10:15 AM"],
+            ["Principles & Practice of Accounting", "10:15 AM – 11:15 AM"],
+            ["Business Economics & BCK", "11:15 AM – 12:15 PM"],
+            ["Business Mathematics, LR & Statistics", "12:15 PM – 1:15 PM"],
+          ]}
+          installment={[
+            "₹2,000 payable at the time of registration",
+            "Remaining ₹36,000 payable in 2 monthly installments of ₹18,000",
+          ]}
+          salient={[
+            {
+              title: "Limited Batch Size",
+              desc:
+                "Batch strength is limited to ensure proper individual attention and effective classroom interaction.",
+            },
+            {
+              title: "Complete Course Coverage",
+              desc:
+                "The entire syllabus is covered within the specified duration using a structured teaching approach.",
+            },
+            {
+              title: "Support for Missed Classes",
+              desc:
+                "Students missing classes due to genuine reasons are given additional academic support.",
+            },
+            {
+              title: "Study Material Provided",
+              desc:
+                "Comprehensive study material is provided to every student for better understanding and revision.",
+            },
+            {
+              title: "Offline Classes with Online Backup",
+              desc:
+                "Classes are conducted in offline mode with online support available in emergency situations.",
+            },
+          ]}
+        />
+      )}
+
+      {active === "group1" && (
+        <CourseBlock
+          title="CA Inter – Group 1"
+          feeTitle="CA Inter Group 1 – Fee Structure"
+          duration="4 Months"
+          fee="₹39,000"
+          subjects={[
+            ["Corporate & Other Laws", "9:30 AM – 10:30 AM"],
+            ["Advanced Accounting", "10:30 AM – 11:30 AM"],
+            ["Taxation", "11:30 AM – 12:30 PM"],
+          ]}
+          installment={[
+            "₹2,000 payable at the time of registration",
+            "Remaining ₹37,000 payable in 2 monthly installments of ₹18,500",
+          ]}
+          salient={[
+            {
+              title: "Small Batch Strength",
+              desc:
+                "Batch size is limited to maintain focus, discipline, and personal attention.",
+            },
+            {
+              title: "Planned Teaching Method",
+              desc:
+                "Subjects are taught in a planned manner ensuring full syllabus coverage.",
+            },
+            {
+              title: "Extra Academic Support",
+              desc:
+                "Additional support is provided to students who miss classes due to unavoidable reasons.",
+            },
+            {
+              title: "Revision & Test Series",
+              desc:
+                "Regular revision sessions and tests are conducted to improve exam readiness.",
+            },
+            {
+              title: "Offline with Online Backup",
+              desc:
+                "Classes are conducted offline with online support available when required.",
+            },
+          ]}
+        />
+      )}
+
+      {active === "group2" && (
+        <CourseBlock
+          title="CA Inter – Group 2"
+          feeTitle="CA Inter Group 2 – Fee Structure"
+          duration="4 Months"
+          fee="₹39,000"
+          subjects={[
+            ["Cost & Management Accounting", "9:30 AM – 10:30 AM"],
+            ["Auditing & Ethics", "10:30 AM – 11:30 AM"],
+            ["Financial Management & Strategic Management", "11:30 AM – 12:30 PM"],
+          ]}
+          installment={[
+            "₹2,000 payable at the time of registration",
+            "Remaining ₹37,000 payable in 2 monthly installments of ₹18,500",
+          ]}
+          salient={[
+            {
+              title: "Focused Batch Size",
+              desc:
+                "Limited batch strength ensures quality teaching and better student interaction.",
+            },
+            {
+              title: "Complete Syllabus Coverage",
+              desc:
+                "Entire syllabus is completed within the course duration using a structured approach.",
+            },
+            {
+              title: "Revision & Practice Tests",
+              desc:
+                "Regular revision and testing helps strengthen concepts and exam confidence.",
+            },
+            {
+              title: "Academic Support",
+              desc:
+                "Students missing classes due to valid reasons are given extra academic assistance.",
+            },
+            {
+              title: "Offline with Emergency Online Support",
+              desc:
+                "Offline classes with online backup in emergency situations.",
+            },
+          ]}
+        />
+      )}
+
+      {/* ENQUIRY SECTION — SAME AS 12TH */}
+      <section className="py-24">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-3xl font-bold mb-4">
+              For Further <span className="text-red-600">Enquiries</span>
+            </h2>
+
+            <p className="font-semibold mt-6">Call Us</p>
+            <p className="text-gray-600">
+              9815036812 · 9316131806 <br />
+              8288004140 · 9915776601
+            </p>
+
+            <p className="font-semibold mt-6">Visit Us</p>
+            <p className="text-gray-600">
+              SCO 206, Sector 36-D, Chandigarh
+            </p>
+          </div>
+
+          <div className="border p-10 flex flex-col justify-center">
+            <Link to="/apply">
+              <button className="w-full px-12 py-4 border-2 border-red-600 text-red-600 font-semibold hover:bg-red-600 hover:text-white transition">
+                Apply for Admission
+              </button>
+            </Link>
+
+            <p className="text-sm text-gray-500 mt-4">
+              Our team will contact you within 24 hours
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+/* COURSE BLOCK */
+function CourseBlock({
+  title,
+  duration,
+  fee,
+  feeTitle,
+  subjects,
+  installment,
+  salient,
+}) {
+  return (
+    <section className="py-20">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">{title}</h2>
+
+        <p className="text-gray-600 mb-10">
+          Duration:{" "}
+          <span className="font-semibold text-red-600">{duration}</span>
+        </p>
+
+        {/* SCHEDULE */}
+        <div className="overflow-x-auto border mb-10">
+          <table className="w-full text-left">
+            <thead className="bg-gray-900 text-white">
+              <tr>
+                <th className="px-6 py-4">Subject</th>
+                <th className="px-6 py-4">Timing</th>
+                <th className="px-6 py-4">Days</th>
+              </tr>
+            </thead>
+            <tbody>
+              {subjects.map(([sub, time]) => (
+                <tr key={sub} className="border-t">
+                  <td className="px-6 py-5 font-semibold">{sub}</td>
+                  <td className="px-6 py-5">{time}</td>
+                  <td className="px-6 py-5">Monday – Friday</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p className="text-gray-600 mb-12">
+          Two tests are conducted every month on Saturday.
+        </p>
+
+        {/* FEE STRUCTURE */}
+        <h2 className="text-4xl md:text-5xl font-bold mb-10">
+          {feeTitle}
+        </h2>
+
+        <div className="max-w-md border rounded-2xl p-8 transition-shadow hover:shadow-xl hover:shadow-red-600/30 mb-20">
+          <p className="text-sm text-gray-500 mb-2">Total Course Fee</p>
+          <p className="text-4xl font-bold text-red-600 mb-6">{fee}</p>
+
+          <ul className="space-y-3 text-gray-700">
+            {installment.map((i, idx) => (
+              <li key={idx}>{i}</li>
+            ))}
+          </ul>
+        </div>
+
+        {/* SALIENT FEATURES */}
+        <h2 className="text-4xl md:text-5xl font-bold mb-16">
+          Salient <span className="text-red-600">Features</span>
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-10">
+          {salient.map((item, index) => (
+            <div
+              key={index}
+              className="group border rounded-2xl p-8 transition-shadow hover:shadow-xl hover:shadow-red-600/30"
+            >
+              <div className="flex items-start gap-5">
+                <span className="text-4xl font-light text-gray-200 group-hover:text-red-600 transition">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
