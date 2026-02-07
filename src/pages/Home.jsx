@@ -19,15 +19,14 @@ export default function Home() {
       {/* <TopBar /> */}
       <Navbar />
       <Hero />
-      <About />
+      <section id="about"> <About /> </section>
       <VanishText/>
-      <Courses />
-      {/* <Achievers /> */}
+      <section id="courses">  <Courses /> </section>
       <Admissions />
-      <Gallery />
-      <Testimonials />
-      <ModernTestimonials/>
-     
+      <section id="why">  <Gallery /> </section>
+      <section id="students">  <Testimonials />   </section>
+      <section id="testimonials">   <ModernTestimonials/></section>
+    
       {/* <Contact /> */}
       <Footer />
       <StickyApply />

@@ -45,12 +45,13 @@ export default function Testimonials() {
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            Discover the inspiring stories{" "}
-            <span className="font-extrabold">
-              and gain valuable insights
-            </span>{" "}
-            straight from our accomplished graduates
-          </h2>
+          Real experiences shared by{" "}
+          <span className="font-extrabold">
+            our successful students
+          </span>{" "}
+          who achieved their academic goals with us
+        </h2>
+
 
           {/* DESKTOP CONTROLS (unchanged) */}
           <div className="hidden md:flex items-center gap-6 mt-10">
