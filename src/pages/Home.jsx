@@ -16,7 +16,19 @@ import ModernTestimonials from "../components/ModernTestimonials";
 export default function Home() {
   return (
     <>
-    <div className="bg-red-600 text-white text-8xl align-middle justify-center h-25"> UNDER MAINTAINANCE</div>
+    <div className="sticky top-0 z-50 w-full bg-red-600 text-white">
+  <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-center">
+    <span className="text-center font-bold tracking-wide
+      text-xl
+      sm:text-2xl
+      md:text-4xl
+      lg:text-6xl
+      xl:text-8xl">
+      UNDER MAINTENANCE
+    </span>
+  </div>
+</div>
+
       {/* <TopBar /> */}
       <Navbar />
 
