@@ -16,10 +16,13 @@ import ModernTestimonials from "../components/ModernTestimonials";
 export default function Home() {
   return (
     <>
+    <div className="bg-red-600 text-white text-8xl align-middle justify-center h-25"> UNDER MAINTAINANCE</div>
       {/* <TopBar /> */}
       <Navbar />
+
       <Hero />
       <section id="about"> <About /> </section>
+  
       <VanishText/>
       <section id="courses">  <Courses /> </section>
       <Admissions />
