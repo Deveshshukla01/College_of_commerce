@@ -96,13 +96,13 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center gap-4">
-        <a
+        {/* <a
           href={LINKS.facebook}
           target="_blank"
           rel="noopener noreferrer"
         >
           <Facebook size={16} className="hover:text-blue-400 cursor-pointer" />
-        </a>
+        </a> */}
 
         <a
           href={LINKS.instagram}
@@ -112,13 +112,13 @@ export default function Navbar() {
           <Instagram size={16} className="hover:text-pink-400 cursor-pointer" />
         </a>
 
-        <a
+        {/* <a
           href={LINKS.twitter}
           target="_blank"
           rel="noopener noreferrer"
         >
           <Twitter size={16} className="hover:text-sky-400 cursor-pointer" />
-        </a>
+        </a> */}
       </div>
 
     </div>

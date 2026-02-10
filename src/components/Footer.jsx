@@ -79,9 +79,9 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-4 mt-4 text-sm">
-            <a href="#" className="hover:text-red-500 transition">
+            {/* <a href="#" className="hover:text-red-500 transition">
               Facebook
-            </a>
+            </a> */}
             <a href="https://www.instagram.com/college.of.commerce?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="hover:text-red-500 transition">
               Instagram
             </a>
