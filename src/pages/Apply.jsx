@@ -83,7 +83,7 @@ export default function Apply() {
         <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl p-8 md:p-12">
 
           {/* HOW TO APPLY */}
-          <div className="bg-red-50 border border-red-200 rounded-2xl p-6 mb-10">
+          {/* <div className="bg-red-50 border border-red-200 rounded-2xl p-6 mb-10">
             <h3 className="text-xl font-bold text-red-600 text-center mb-4">
               How to Apply
             </h3>
@@ -95,7 +95,61 @@ export default function Apply() {
                 The College of Commerce will contact you after verification.
               </p>
             </div>
+          </div> */}
+          <div className="bg-red-50 border border-red-200 rounded-2xl p-6 mb-10">
+          <h3 className="text-xl font-bold text-red-600 text-center mb-4">
+            How to Apply
+          </h3>
+
+          <div className="space-y-5 text-sm text-gray-700">
+
+            {/* OPTION 1 */}
+            <div>
+              <p className="font-semibold text-red-600 mb-1">
+                Option 1: Apply Without Payment
+              </p>
+              <p>
+                Fill in the admission form with all details carefully.
+                <br />
+                <strong className="text-gray-900">
+                  Keep the checkbox “I have completed the payment” UNCHECKED.
+                </strong>
+              </p>
+              <p className="mt-1">
+                Our team will review your details and connect with you once your
+                application is confirmed.
+              </p>
+            </div>
+
+            {/* OPTION 2 */}
+            <div>
+              <p className="font-semibold text-red-600 mb-1">
+                Option 2: Apply With Payment
+              </p>
+              <p>
+                Pay the required admission amount of{" "}
+                <strong className="text-gray-900">₹2000</strong> and then fill in the
+                admission form.
+              </p>
+              <p className="mt-1">
+                <strong className="text-gray-900">
+                  Check the checkbox “I have completed the payment”
+                </strong>{" "}
+                and enter the Transaction ID correctly.
+              </p>
+              <p className="mt-1">
+                Once your payment is verified, our team will contact you for the next
+                steps.
+              </p>
+            </div>
+
+            <p className="font-medium text-center pt-3 text-gray-800">
+              The College of Commerce will contact you after verification.
+            </p>
+
           </div>
+        </div>
+
 
           {/* HEADER */}
           <div className="text-center mb-10">
