@@ -17,7 +17,7 @@ export default function StickyApply() {
   return (
     <Link
       to="/apply"
-      className="fixed bottom-0 w-full bg-red-600 text-white py-2 overflow-hidden rounded-t-2xl shadow-lg"
+      className="fixed bottom-0 w-full bg-red-600 text-white py-2 overflow-hidden rounded-t-2xl shadow-lg z-50"
     >
       <div className="animate-marquee whitespace-nowrap text-center font-bold text-lg">
         Apply Now – Admission Form Open

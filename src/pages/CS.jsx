@@ -101,9 +101,9 @@ export default function CS() {
                 "Comprehensive study material is provided to every student for effective preparation.",
             },
             {
-              title: "Offline Classes with Online Backup",
+              title: "Online & Offline Classes Available",
               desc:
-                "Classes are conducted in offline mode with online support available in emergency situations.",
+                "Students can choose between online and offline modes of learning. Live interactive lectures are conducted regularly, and recorded sessions are also provided for revision and flexible learning.",
             },
           ]}
         />
@@ -147,9 +147,9 @@ export default function CS() {
                 "Well-structured study material is provided to support classroom learning.",
             },
             {
-              title: "Offline with Emergency Online Support",
+              title: "Online & Offline Classes Available",
               desc:
-                "Classes are primarily offline with online backup available in emergencies.",
+                "Students can choose between online and offline modes of learning. Live interactive lectures are conducted regularly, and recorded sessions are also provided for revision and flexible learning.",
             },
           ]}
         />

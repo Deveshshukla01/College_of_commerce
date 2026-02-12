@@ -100,9 +100,9 @@ export default function CA() {
                 "Comprehensive study material is provided to every student for better understanding and revision.",
             },
             {
-              title: "Offline Classes with Online Backup",
+              title: "Online & Offline Classes Available",
               desc:
-                "Classes are conducted in offline mode with online support available in emergency situations.",
+                "Students can choose between online and offline modes of learning. Live interactive lectures are conducted regularly, and recorded sessions are also provided for revision and flexible learning.",
             },
           ]}
         />
@@ -145,9 +145,9 @@ export default function CA() {
                 "Regular revision sessions and tests are conducted to improve exam readiness.",
             },
             {
-              title: "Offline with Online Backup",
+              title: "Online & Offline Classes Available",
               desc:
-                "Classes are conducted offline with online support available when required.",
+                "Students can choose between online and offline modes of learning. Live interactive lectures are conducted regularly, and recorded sessions are also provided for revision and flexible learning.",
             },
           ]}
         />

@@ -12,6 +12,7 @@ import Footer from "../components/Footer";
 import StickyApply from "../components/StickyApply";
 import { VanishText } from "../components/VanishTexts";
 import ModernTestimonials from "../components/ModernTestimonials";
+import MoreAboutCollege from "../components/MoreAboutCollege";
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
       <Admissions />
       <section id="why">  <Gallery /> </section>
       <section id="students">  <Testimonials />   </section>
+      <MoreAboutCollege/>
       <section id="testimonials">   <ModernTestimonials/></section>
     
       {/* <Contact /> */}
