@@ -136,10 +136,12 @@ export default function Tenth() {
                     "After completion of the course, full revision sessions are conducted along with a comprehensive test series covering the entire syllabus.",
                 },
                 {
-                  title: "Offline Classes with Online Backup",
+                  title: "Online & Offline Classes Available",
                   desc:
-                    "Classes are conducted primarily in offline mode. In emergency situations, online classes are also available to ensure uninterrupted learning.",
-                },
+                    "Students can choose between online and offline modes of learning. Live interactive lectures are conducted regularly, and recorded sessions are also provided for revision and flexible learning.",
+                }
+                
+                ,
               ].map((item, index) => (
                 <div
                   key={index}

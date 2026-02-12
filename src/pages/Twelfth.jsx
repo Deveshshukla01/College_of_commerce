@@ -190,10 +190,12 @@ export default function Twelfth() {
                   "After completion of the course, full revision sessions and a complete test series covering the entire syllabus are conducted.",
               },
               {
-                title: "Offline Classes with Online Backup",
+                title: "Online & Offline Classes Available",
                 desc:
-                  "Classes are conducted in offline mode. In emergency situations, online classes are also available.",
-              },
+                  "Students can choose between online and offline modes of learning. Live interactive lectures are conducted regularly, and recorded sessions are also provided for revision and flexible learning.",
+              }
+              
+              ,
             ].map((item, index) => (
               <div
                 key={index}

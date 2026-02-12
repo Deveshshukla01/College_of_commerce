@@ -190,10 +190,12 @@ export default function CA() {
                 "Students missing classes due to valid reasons are given extra academic assistance.",
             },
             {
-              title: "Offline with Emergency Online Support",
+              title: "Online & Offline Classes Available",
               desc:
-                "Offline classes with online backup in emergency situations.",
-            },
+                "Students can choose between online and offline modes of learning. Live interactive lectures are conducted regularly, and recorded sessions are also provided for revision and flexible learning.",
+            }
+            
+            ,
           ]}
         />
       )}

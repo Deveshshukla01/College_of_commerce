@@ -1,8 +1,19 @@
+
+
+import { useState, useEffect } from "react";
+
 import ApplyNavbar from "../components/ApplyNavbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 export default function BCom() {
+  const [semesterType, setSemesterType] = useState("even");
+  
+useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [semesterType]);
+  
+
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <ApplyNavbar />
@@ -31,166 +42,93 @@ export default function BCom() {
         </div>
       </section>
 
-      {/* 2ND SEMESTER */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            2<sup>nd</sup> <span className="text-red-600">Semester</span>
-          </h2>
-
-          <div className="overflow-x-auto border">
-            <table className="w-full text-left">
-              <thead className="bg-gray-900 text-white">
-                <tr>
-                  <th className="px-6 py-4">Subject</th>
-                  <th className="px-6 py-4">Timing</th>
-                  <th className="px-6 py-4">Days</th>
-                  <th className="px-6 py-4">Fee</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-t">
-                  <td className="px-6 py-5 font-semibold">
-                    Corporate Accounting
-                  </td>
-                  <td className="px-6 py-5">3:00 PM – 4:00 PM</td>
-                  <td className="px-6 py-5">Monday to Friday</td>
-                  <td className="px-6 py-5 font-bold text-red-600">
-                    ₹6,800
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+      {/* EVEN / ODD TOGGLE */}
+      <section className="sticky top-16 z-20 bg-white py-6">
+        <div className="max-w-6xl mx-auto px-6 flex gap-4 justify-center">
+          {["even", "odd"].map((type) => (
+            <button
+              key={type}
+              onClick={() => setSemesterType(type)}
+              className={`px-8 py-3 border font-semibold transition ${
+                semesterType === type
+                  ? "bg-red-600 text-white border-red-600"
+                  : "border-red-600 text-red-600 hover:bg-red-600 hover:text-white"
+              }`}
+            >
+              {type === "even" ? "Even Semester" : "Odd Semester"}
+            </button>
+          ))}
         </div>
       </section>
 
-      {/* 4TH SEMESTER */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            4<sup>th</sup> <span className="text-red-600">Semester</span>
-          </h2>
+      {/* ================= EVEN SEMESTER ================= */}
+      {semesterType === "even" && (
+        <>
+          {/* 2ND SEM */}
+          <SemesterTable
+            title="2nd Semester"
+            rows={[
+              ["Corporate Accounting", "3:00 PM – 4:00 PM", "Mon–Fri", "₹6,800"],
+            ]}
+          />
 
-          <div className="overflow-x-auto border">
-            <table className="w-full text-left">
-              <thead className="bg-gray-900 text-white">
-                <tr>
-                  <th className="px-6 py-4">Subject</th>
-                  <th className="px-6 py-4">Timing</th>
-                  <th className="px-6 py-4">Days</th>
-                  <th className="px-6 py-4">Fee</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-t">
-                  <td className="px-6 py-5 font-semibold">
-                    Cost Management
-                  </td>
-                  <td className="px-6 py-5">4:00 PM – 5:00 PM</td>
-                  <td className="px-6 py-5">Mon, Wed, Fri</td>
-                  <td className="px-6 py-5 font-bold text-red-600">
-                    ₹6,800
-                  </td>
-                </tr>
-                <tr className="border-t">
-                  <td className="px-6 py-5 font-semibold">
-                    Advance Accounting
-                  </td>
-                  <td className="px-6 py-5">4:00 PM – 5:00 PM</td>
-                  <td className="px-6 py-5">Tue, Thu, Sat</td>
-                  <td className="px-6 py-5 font-bold text-red-600">
-                    ₹6,800
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+          {/* 4TH SEM */}
+          <SemesterTable
+            title="4th Semester"
+            rows={[
+              ["Cost Management", "4:00 PM – 5:00 PM", "Mon, Wed, Fri", "₹6,800"],
+              ["Advance Accounting", "4:00 PM – 5:00 PM", "Tue, Thu, Sat", "₹6,800"],
+            ]}
+          />
 
-      {/* 6TH SEMESTER */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            6<sup>th</sup> <span className="text-red-600">Semester</span>
-          </h2>
+          {/* 6TH SEM */}
+          <SemesterTable
+            title="6th Semester"
+            rows={[
+              ["Operation Research", "4:00 PM – 5:00 PM", "Mon–Fri", "₹6,800"],
+              ["Direct Tax Laws", "5:00 PM – 6:00 PM", "Mon, Wed, Fri", "₹6,800"],
+              ["Financial Management", "5:00 PM – 6:00 PM", "Tue, Thu, Sat", "₹6,800"],
+            ]}
+          />
 
-          <div className="overflow-x-auto border">
-            <table className="w-full text-left">
-              <thead className="bg-gray-900 text-white">
-                <tr>
-                  <th className="px-6 py-4">Subject</th>
-                  <th className="px-6 py-4">Timing</th>
-                  <th className="px-6 py-4">Days</th>
-                  <th className="px-6 py-4">Fee</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-t">
-                  <td className="px-6 py-5 font-semibold">
-                    Operation Research
-                  </td>
-                  <td className="px-6 py-5">4:00 PM – 5:00 PM</td>
-                  <td className="px-6 py-5">Monday to Friday</td>
-                  <td className="px-6 py-5 font-bold text-red-600">
-                    ₹6,800
-                  </td>
-                </tr>
-                <tr className="border-t">
-                  <td className="px-6 py-5 font-semibold">
-                    Direct Tax Laws
-                  </td>
-                  <td className="px-6 py-5">5:00 PM – 6:00 PM</td>
-                  <td className="px-6 py-5">Mon, Wed, Fri</td>
-                  <td className="px-6 py-5 font-bold text-red-600">
-                    ₹6,800
-                  </td>
-                </tr>
-                <tr className="border-t">
-                  <td className="px-6 py-5 font-semibold">
-                    Financial Management
-                  </td>
-                  <td className="px-6 py-5">5:00 PM – 6:00 PM</td>
-                  <td className="px-6 py-5">Tue, Thu, Sat</td>
-                  <td className="px-6 py-5 font-bold text-red-600">
-                    ₹6,800
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-    {/* MODE OF FEES */}
-    <section className="py-20">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold mb-10">
-          Mode of <span className="text-red-600">Fees</span>
-        </h2>
+          <FeeMode first="₹3,800" second="₹3,000" />
+        </>
+      )}
 
-        <div className="max-w-md border rounded-2xl p-8 transition-shadow hover:shadow-xl hover:shadow-red-600/30">
-          <h3 className="text-2xl font-semibold mb-6">
-            Payment Structure
-          </h3>
+      {/* ================= ODD SEMESTER ================= */}
+      {semesterType === "odd" && (
+        <>
+          {/* 1ST SEM */}
+          <SemesterTable
+            title="1st Semester"
+            rows={[
+              ["Financial Accounting (1st Batch)", "2:15 PM – 3:15 PM", "Mon–Fri", "₹7,800"],
+              ["Financial Accounting (2nd Batch)", "7:00 PM – 7:45 PM", "Mon–Fri", "₹7,800"],
+            ]}
+          />
 
-          <div className="space-y-5 text-gray-700">
-            <div className="flex items-start gap-4">
-              <span className="text-red-600 font-bold text-lg">₹3,800</span>
-              <p>Payable at the commencement of the course</p>
-            </div>
+          {/* 3RD SEM */}
+          <SemesterTable
+            title="3rd Semester"
+            rows={[
+              ["Cost Accounting", "5:15 PM – 6:00 PM", "Mon–Fri", "₹7,800"],
+            ]}
+          />
 
-            <div className="flex items-start gap-4">
-              <span className="text-red-600 font-bold text-lg">₹3,000</span>
-              <p>Payable after one month of the course</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          {/* 5TH SEM */}
+          <SemesterTable
+            title="5th Semester"
+            rows={[
+              ["Direct Taxes", "6:00 PM – 7:00 PM", "Mon, Wed, Fri", "₹7,800"],
+              ["Management Accounting", "6:00 PM – 7:00 PM", "Tue, Thu, Sat", "₹7,800"],
+            ]}
+          />
 
+          <FeeMode first="₹4,800" second="₹3,000" />
+        </>
+      )}
 
-      {/* ENQUIRY SECTION */}
+      {/* ENQUIRY */}
       <section className="py-24">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
           <div>
@@ -228,3 +166,66 @@ export default function BCom() {
     </div>
   );
 }
+
+/* REUSABLE COMPONENTS */
+
+function SemesterTable({ title, rows }) {
+  return (
+    <section className="py-20">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-4xl md:text-5xl font-bold mb-8">
+          {title.split(" ")[0]} <span className="text-red-600">Semester</span>
+        </h2>
+
+        <div className="overflow-x-auto border">
+          <table className="w-full text-left">
+            <thead className="bg-gray-900 text-white">
+              <tr>
+                <th className="px-6 py-4">Subject</th>
+                <th className="px-6 py-4">Timing</th>
+                <th className="px-6 py-4">Days</th>
+                <th className="px-6 py-4">Fee</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((r, i) => (
+                <tr key={i} className="border-t">
+                  <td className="px-6 py-5 font-semibold">{r[0]}</td>
+                  <td className="px-6 py-5">{r[1]}</td>
+                  <td className="px-6 py-5">{r[2]}</td>
+                  <td className="px-6 py-5 font-bold text-red-600">{r[3]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FeeMode({ first, second }) {
+  return (
+    <section className="py-20">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-4xl md:text-5xl font-bold mb-10">
+          Mode of <span className="text-red-600">Fees</span>
+        </h2>
+
+        <div className="max-w-md border rounded-2xl p-8 hover:shadow-xl hover:shadow-red-600/30">
+          <div className="space-y-5 text-gray-700">
+            <div className="flex gap-4">
+              <span className="text-red-600 font-bold">{first}</span>
+              <p>Payable at the commencement of the course</p>
+            </div>
+            <div className="flex gap-4">
+              <span className="text-red-600 font-bold">{second}</span>
+              <p>Payable after one month of the course</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
