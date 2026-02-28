@@ -11,8 +11,8 @@ const DATA = [
     a reputation for excellence, the institute has successfully shaped generations
     of skilled, ethical, and industry-ready professionals.`,
     images: [
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+      "/gallery/1.png",
+      "/gallery/2.png",
     ],
   },
   {
@@ -23,8 +23,8 @@ const DATA = [
     personalized mentorship, ensuring students gain real-world insights alongside
     academic excellence.`,
     images: [
-      "https://images.unsplash.com/photo-1543269865-cbf427effbad",
-      "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70",
+      "/gallery/3.png",
+      "/gallery/4.png",
     ],
   },
   {
@@ -35,8 +35,8 @@ const DATA = [
     analytical thinking, and industry awareness, preparing them for competitive
     career opportunities.`,
     images: [
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655",
+      "/gallery/5.png",
+      "/gallery/6.png",
     ],
   },
   {
@@ -47,8 +47,8 @@ const DATA = [
     students to apply theoretical concepts, develop problem-solving abilities,
     and gain confidence in professional environments.`,
     images: [
-      "https://images.unsplash.com/photo-1556761175-129418cb2dfe",
-      "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca",
+      "/gallery/1.png",
+      "/gallery/7.png",
     ],
   },
   {
@@ -59,8 +59,8 @@ const DATA = [
     and continuous guidance ensure that every student progresses with clarity,
     confidence, and purpose.`,
     images: [
-      "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b",
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7",
+      "/gallery/3.png",
+      "/gallery/2.png",
     ],
   },
   {
@@ -71,8 +71,8 @@ const DATA = [
     management, entrepreneurship, education, and public services. Their success
     reflects the institute’s commitment to quality education.`,
     images: [
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      "/gallery/1.png",
+      "/gallery/2.png",
     ],
   },
 ];

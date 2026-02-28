@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import ApplyNavbar from "../components/ApplyNavbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import MidSection from "../components/MidLogo";
 
 export default function BCom() {
   const [semesterType, setSemesterType] = useState("even");
@@ -17,6 +18,7 @@ useEffect(() => {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <ApplyNavbar />
+      <MidSection/>
 
       {/* HERO */}
       <section className="py-20">

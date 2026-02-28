@@ -15,6 +15,7 @@ import ModernTestimonials from "../components/ModernTestimonials";
 import MoreAboutCollege from "../components/MoreAboutCollege";
 import EndSection from "../components/EndSection";
 
+
 export default function Home() {
   return (
     <>
@@ -35,11 +36,15 @@ export default function Home() {
   </div>
 </div>
 
+
       <Hero />
       <section id="about"> <About /> </section>
+     
+     
   
       <VanishText/>
       <section id="courses">  <Courses /> </section>
+      
       <Admissions />
       <section id="why">  <Gallery /> </section>
       <section id="students">  <Testimonials />   </section>
