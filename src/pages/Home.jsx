@@ -23,7 +23,7 @@ export default function Home() {
 
       {/* <TopBar /> */}
       <Navbar />
-      <div className="sticky top-0 z-50 w-full bg-red-600 text-white">
+      {/* <div className="sticky top-0 z-50 w-full bg-red-600 text-white">
   <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-center">
     <span className="text-center font-bold tracking-wide
       text-xl
@@ -34,7 +34,7 @@ export default function Home() {
       UNDER MAINTENANCE
     </span>
   </div>
-</div>
+</div> */}
 
 
       <Hero />
